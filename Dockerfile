@@ -1,2 +1,2 @@
-FROM tomcat
-COPY login.html  C:\Program Files\login.html
+FROM nginx
+COPY login.html /usr/share/nginx/html
