@@ -1,2 +1,2 @@
-FROM httpd
-COPY login.html /var/www/html/login.html
+FROM tomcat
+COPY login.html  C:\Program Files\login.html
