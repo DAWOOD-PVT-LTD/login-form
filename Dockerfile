@@ -1,2 +1,2 @@
 FROM nginx
-COPY login.html /usr/share/nginx/html
+COPY . /usr/share/nginx/html
