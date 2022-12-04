@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: login-server
-        image: pathandawood/loginimg:latest
+        image: 44.200.219.148:8082/loginimg:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
