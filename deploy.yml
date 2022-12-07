@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: nginx-server
-        image: nginx
+        image: pathandawood/login-form:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
