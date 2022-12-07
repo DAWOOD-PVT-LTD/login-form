@@ -1,42 +1,39 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: login-server
+  name: nginx-server
   namespace: dev-test
   labels:
-    app: login-server
+    app: nginx-server
     version: alpha
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: login-server
+      app: nginx-server
       version: alpha
   template:
     metadata:
-      name: login-server
+      name: nginx-server
       labels:
-        app: login-server
+        app: nginx-server
         version: alpha
     spec:
       containers:
-      - name: login-server
-        image: 44.200.219.148:8082/loginimg:latest
+      - name: nginx-server
+        image: nginx
         imagePullPolicy: Always
         ports:
         - containerPort: 80
-      imagePullSecrets:
-      - name: nexus-cred
-       
 ---
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: login-server
+  name: nginx-server
   namespace: dev-test
   labels:
-    app: login-server
+    app: nginx-server
     version: alpha
 spec:
   type: NodePort
@@ -45,10 +42,10 @@ spec:
     targetPort: 80
     nodePort: 32565
   selector:
-    app: login-server
+    app: nginx-server
     version: alpha
     
     
    
  
- 
+  
