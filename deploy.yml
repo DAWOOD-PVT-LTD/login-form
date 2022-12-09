@@ -25,7 +25,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
-      imagePullScerets:
+      imagePullSecrets:
       - name: nexus-login
 ---
 
