@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: nginx-server
-        image: 44.211.22.125:8082/login-form:latest
+        image: 54.236.38.112:8082/login-service
         imagePullPolicy: Always
         ports:
         - containerPort: 80
