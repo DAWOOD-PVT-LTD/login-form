@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: nginx-server
-        image: 54.236.38.112:8082/imageversion
+        image: 44.192.24.140:8082/imageversion
         imagePullPolicy: Always
         ports:
         - containerPort: 80
